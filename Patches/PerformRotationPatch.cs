@@ -33,16 +33,19 @@ namespace UltimateBuilder
         }
         static void RotateWithModifiers(Transform transform, float x, float y, float z)
         {
-            z /= 2;
-
-            if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
+            if (UltimateBuilderMod.enableCustomRotation)
             {
-                z /= 3;
-            }
+                z /= 2;
 
-            if (Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt))
-            {
-                z /= 5;
+                if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
+                {
+                    z /= 3;
+                }
+
+                if (Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt))
+                {
+                    z /= 5;
+                }
             }
 
             transform.Rotate(x, y, z);

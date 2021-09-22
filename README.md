@@ -10,6 +10,7 @@ This is an `Ultimate Chicken Horse` `BepInEx` mod that allows you to rotate piec
 | ALT  |       9º |
 | BOTH |       3º |
 | TAB  |    RESET |
+| F4   |   TOGGLE |
 
 Head over to [releases](https://github.com/notfood/UCH-UltimateBuilder/releases) to download it.
 
