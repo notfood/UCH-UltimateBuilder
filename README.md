@@ -3,14 +3,20 @@ This is an `Ultimate Chicken Horse` `BepInEx` mod that allows you to rotate piec
 
 ![sample](https://i.imgur.com/MoLDPuo.gif)
 
-| Key  | Rotation |
-| ---  |      --- |
-| NONE |      45º |
-| CTRL |      15º |
-| ALT  |       9º |
-| BOTH |       3º |
-| TAB  |    RESET |
-| F4   |   TOGGLE |
+| Key  | Overrides |
+| ---  |       --- |
+| F5   |  Rotation |
+| F9   | Collision |
+| F10  |      Grid |
+| F12  |   ALL OFF |
+
+| Key  |  Rotation |
+| ---  |       --- |
+| NONE |       45º |
+| CTRL |       15º |
+| ALT  |        9º |
+| BOTH |        3º |
+| TAB  |     RESET |
 
 Head over to [releases](https://github.com/notfood/UCH-UltimateBuilder/releases) to download it.
 

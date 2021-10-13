@@ -17,6 +17,8 @@ namespace UltimateBuilder.Patches
             {
                 Reset(__instance.Piece.transform);
             }
+
+            __instance.Piece.IgnorePlacementRules = UltimateBuilderMod.enableColliderOverride;
         }
 
         static void Reset(Transform transform)

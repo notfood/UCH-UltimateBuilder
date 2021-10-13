@@ -33,7 +33,7 @@ namespace UltimateBuilder
         }
         static void RotateWithModifiers(Transform transform, float x, float y, float z)
         {
-            if (UltimateBuilderMod.enableCustomRotation)
+            if (UltimateBuilderMod.enableRotationOverride)
             {
                 z /= 2;
 

@@ -8,18 +8,57 @@ namespace UltimateBuilder
     {
         static void Prefix()
         {
-            if (Input.GetKeyDown(KeyCode.F4))
+            if (Input.GetKeyDown(KeyCode.F5))
             {
-                ToggleCustomRotation();
+                ToggleRotationOverride();
+            }
+            else if(Input.GetKeyDown(KeyCode.F9))
+            {
+                ToggleColliderOverride();
+            }
+            else if(Input.GetKeyDown(KeyCode.F10))
+            {
+                ToggleGridOverride();
+            }
+            else if(Input.GetKeyDown(KeyCode.F12))
+            {
+                DisableAll();
             }
         }
 
-        static void ToggleCustomRotation()
+        static void ToggleRotationOverride()
         {
-            UltimateBuilderMod.enableCustomRotation = !UltimateBuilderMod.enableCustomRotation;
+            UltimateBuilderMod.enableRotationOverride = !UltimateBuilderMod.enableRotationOverride;
 
-            string message = UltimateBuilderMod.enableCustomRotation ? "Enabled" : "Disabled";
-            UserMessageManager.Instance.UserMessage($"Custom Rotations {message}");
+            NotifyChanged("Rotation Override", UltimateBuilderMod.enableRotationOverride);
+        }
+
+        static void ToggleColliderOverride()
+        {
+            UltimateBuilderMod.enableColliderOverride = !UltimateBuilderMod.enableColliderOverride;
+
+            NotifyChanged("Collition Override", UltimateBuilderMod.enableColliderOverride);
+        }
+
+        static void ToggleGridOverride()
+        {
+            UltimateBuilderMod.enableGridOverride = !UltimateBuilderMod.enableGridOverride;
+
+            NotifyChanged("Grid Override", UltimateBuilderMod.enableGridOverride);
+        }
+
+        static void DisableAll()
+        {
+            UltimateBuilderMod.enableRotationOverride = false;
+            UltimateBuilderMod.enableColliderOverride = false;
+            UltimateBuilderMod.enableGridOverride = false;
+
+            NotifyChanged("All Overrides", false);
+        }
+
+        static void NotifyChanged(string name, bool value)
+        {
+            UserMessageManager.Instance.UserMessage($"{name} {(value ? "Enabled" : "Disabled")}");
         }
     }
 }
