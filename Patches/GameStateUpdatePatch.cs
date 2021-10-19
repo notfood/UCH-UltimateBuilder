@@ -20,7 +20,7 @@ namespace UltimateBuilder
             {
                 ToggleGridOverride();
             }
-            else if(Input.GetKeyDown(KeyCode.F12))
+            else if(Input.GetKeyDown(KeyCode.F11))
             {
                 DisableAll();
             }
@@ -37,7 +37,7 @@ namespace UltimateBuilder
         {
             UltimateBuilderMod.enableColliderOverride = !UltimateBuilderMod.enableColliderOverride;
 
-            NotifyChanged("Collition Override", UltimateBuilderMod.enableColliderOverride);
+            NotifyChanged("Collision Override", UltimateBuilderMod.enableColliderOverride);
         }
 
         static void ToggleGridOverride()

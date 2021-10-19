@@ -8,7 +8,7 @@ This is an `Ultimate Chicken Horse` `BepInEx` mod that allows you to rotate piec
 | F5   |  Rotation |
 | F9   | Collision |
 | F10  |      Grid |
-| F12  |   ALL OFF |
+| F11  |   ALL OFF |
 
 | Key  |  Rotation |
 | ---  |       --- |
